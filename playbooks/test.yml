@@ -1,14 +1,14 @@
 ---
 - hosts: localhost
   connection: local
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
-- tasks:
+  tasks:
   - name: Get date of server
     command: date
     register: date
 
- - name: Display date
-   debug:
-    msg: date.stdout
+  - name: Display date
+    debug:
+     msg: date.stdout

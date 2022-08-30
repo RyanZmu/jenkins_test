@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   connection: local
-  become: true
+  become_user: admin
   gather_facts: false
 
   tasks:
@@ -11,4 +11,4 @@
 
   - name: Display date
     debug:
-     msg: date.stdout
+     msg: "{{ date.stdout }}"

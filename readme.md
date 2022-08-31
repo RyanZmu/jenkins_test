@@ -10,13 +10,15 @@
 
 - Write another that will deploy our app, Maybe make two different roles - or one (may already have a Node+Express role to reuse) - Done
 
-- Setup Jenkinsfile stages for pipeline
+- Setup Jenkinsfile stages for pipeline - Done
 
-- Commit all my code to github repo
+- Commit all my code to github repo - Done
 
-- Set first stage of pipeline for cloning the repo
+- Set first stage of pipeline for cloning the repo - Done
 
-- Test run the first stage
+- Test run the first stage - Done
+
+- Fix SSH issue with webserver from Jenkins server - In Progress
 
 - Go back and design the app's basic functions
 

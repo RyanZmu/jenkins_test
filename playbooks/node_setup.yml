@@ -1,5 +1,5 @@
 ---
-- hosts: rocky
+- hosts: ubuntu
   become: true
 # Repurpose this playbook for app
   vars:

@@ -5,7 +5,7 @@
   gather_facts: false
 
   tasks:
-  - name: Get date of server
+  - name: Get date of jenkins server
     command: date
     register: date
 

@@ -1,14 +1,14 @@
 ## Project
 
-- First solve issue with Jenkins Pipeline not being able to connect to the github repo and reading our Jenkins file
+- First solve issue with Jenkins Pipeline not being able to connect to the github repo and reading our Jenkins file - Solved
 
-- Make simple React JS app in this directory (book lookup service)
+- Make simple React JS app in this directory (book lookup service) - First just use the generic react app for testing - Done/Design app later
 
-- Setup a Node.js + Express VM webserver
+- Setup a Node.js + Express VM webserver - Done
 
-- Write a playbook that sets up our webserver (this wont be part of pipeline since we want this server to always be up)
+- Write a playbook that sets up our webserver (this wont be part of pipeline since we want this server to always be up) - Done
 
-- Write another that will deploy our app, Maybe make two different roles - or one (may already have a Node+Express role to reuse)
+- Write another that will deploy our app, Maybe make two different roles - or one (may already have a Node+Express role to reuse) - Done
 
 - Commit all my code to github repo
 
@@ -16,7 +16,9 @@
 
 - Test run the first stage
 
-- Setup testing with molecule and add to pipeline (reference book)
+- Go back and design the app's basic functions
+
+- Setup testing with molecule and add to pipeline (reference book) also setup JS testing for our app
 
 - Have pipeline do these stages:
   1. Clone repo

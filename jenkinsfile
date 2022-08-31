@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Clone') {
             steps {
                 echo 'Build Stage'
@@ -21,4 +22,4 @@ pipeline {
         }
     }
 }
-// This is just testing; will break out app deply tasks from node_setup so we can have a seperate stage
+// This is just testing; will break out app deploy tasks from node_setup so we can have a seperate stage

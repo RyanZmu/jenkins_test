@@ -1,8 +1,26 @@
-Have my pipeline include a test job.
-Run the job to pull the repo, then test the playbook (maybe some molecule test), upon passing run the new playbook.
+## Project
 
-In the future, expand the above idea, and lets have Jenkins run a playbook to deploy new versions of my app (new or social media app) whenever I update the repo to a VM webserver of mine
+- First solve issue with Jenkins Pipeline not being able to connect to the github repo and reading our Jenkins file
 
-Each time I update my repo, I can then using jenkins CLI or GUI to run my new website build. Tests will be run before the new changes are deployed to webserver.
+- Make simple React JS app in this directory (book lookup service)
 
-Simulated CI/CD
+- Setup a Node.js + Express VM webserver
+
+- Write a playbook that sets up our webserver (this wont be part of pipeline since we want this server to always be up)
+
+- Write another that will deploy our app, Maybe make two different roles - or one (may already have a Node+Express role to reuse)
+
+- Commit all my code to github repo
+
+- Set first stage of pipeline for cloning the repo
+
+- Test run the first stage
+
+- Setup testing with molecule and add to pipeline (reference book)
+
+- Have pipeline do these stages:
+  1. Clone repo
+  2. Take new code and run through testing
+  3. Upon passing, Run the playbook to deploy the app as the final job in pipeline
+
+ Simple 3-part pipeline, maybe think of a 4th part to add. This will let me edit my app on my local computer, commit it to my repo, run the jenkins pipeline job, and then have a newly tested and working version of my app running on my webserver.

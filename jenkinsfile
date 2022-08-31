@@ -11,8 +11,7 @@ pipeline {
         stage('Set-up Node Environment') {
             steps {
                 echo 'Test Stage'
-                ansible-playbook /var/lib/jenkins/workspace/Pipeline_One/playbooks/node_setup.yml
-
+                sh '''ansible-playbook /var/lib/jenkins/workspace/Pipeline_One/playbooks/node_setup.yml'''
             }
         }
         stage('Deploy') {

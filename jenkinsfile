@@ -2,19 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Build') {
+        stage('Clone') {
             steps {
                 echo 'Build Stage'
+                git branch: 'main', credentialsId: '5438033d-7a02-4925-a98d-b069a3eb2c45', url: 'https://github.com/RyanZmu/jenkins_test'
             }
         }
-        stage('Test') {
+        stage('Set-up Node Environment') {
             steps {
                 echo 'Test Stage'
+                ansible-playbook /var/lib/jenkins/workspace/Pipeline_One/playbooks/node_setup.yml
+
             }
         }
         stage('Deploy') {
@@ -24,3 +22,4 @@ pipeline {
         }
     }
 }
+// This is just testing; will break out app deply tasks from node_setup so we can have a seperate stage

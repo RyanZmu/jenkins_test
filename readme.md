@@ -10,6 +10,8 @@
 
 - Write another that will deploy our app, Maybe make two different roles - or one (may already have a Node+Express role to reuse) - Done
 
+- Setup Jenkinsfile stages for pipeline
+
 - Commit all my code to github repo
 
 - Set first stage of pipeline for cloning the repo

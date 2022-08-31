@@ -8,7 +8,7 @@
   pre_tasks: []
 
   roles:
-   - /var/lib/jenkins/workspace/Pipeline_One/roles/nodejs
+   - nodejs
 #  nodejs role used to setup node.js for our app
 
   tasks:

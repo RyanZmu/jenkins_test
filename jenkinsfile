@@ -6,7 +6,8 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Build Stage'
-                git branch: 'main', credentialsId: '5438033d-7a02-4925-a98d-b069a3eb2c45', url: 'https://github.com/RyanZmu/jenkins_test'
+                git branch: 'main', url: 'git@github.com:RyanZmu/jenkins_test.git'
+                sh 'echo $pub_key > id_rsa.pub'
             }
         }
         stage('Set-up Node Environment') {

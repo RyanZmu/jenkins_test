@@ -39,7 +39,11 @@
      when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/src/App.js') == -1"
 
    - name: Install React app dependencies
-     command: "npm install"
+     command: |
+      "cd {{ node_apps_location }}
+      npm install"
 
    - name: Build react app
-     command: "npm run build"
+     command: |
+      "cd {{ node_apps_location }}
+      npm run build"

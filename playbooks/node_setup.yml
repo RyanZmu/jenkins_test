@@ -38,5 +38,8 @@
      command: "/usr/local/bin/forever start {{ node_apps_location }}/book-lookup-app/src/App.js"
      when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/src/App.js') == -1"
 
-   - name: Start React app
-     command: "npm start {{ node_apps_location }}/book-lookup-app/src/App.js"
+   - name: Install React app dependencies
+     command: "npm install"
+
+   - name: Build react app
+     command: "npm run build"

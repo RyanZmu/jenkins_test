@@ -42,6 +42,6 @@
      command: /usr/local/bin/forever list
 
    - name: Install node.js dependencies
-     command: |
-      cd /usr/local/opt/node/book-lookup-app
-      npm install
+     command:
+      chdir: cd /usr/local/opt/node/book-lookup-app
+      cmd: npm install

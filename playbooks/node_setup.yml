@@ -21,7 +21,7 @@
 
    - name: Copy example Node.js app to server
      copy:
-      src: "app"
+      src: "/var/lib/jenkins/workspace/Test_Pipeline/app/book-lookup-app"
       dest: "{{ node_apps_location }}"
       remote_src: true
      changed_when: false

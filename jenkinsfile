@@ -9,15 +9,6 @@ pipeline {
                 git branch: 'main', url: 'git@github.com:RyanZmu/jenkins_test.git'
             }
         }
-             steps {
-          sshagent(credentials: ['vagrant']) {
-            sh '''
-                [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
-                ssh-keyscan -t rsa,dsa 192.168.60.8 >> ~/.ssh/known_hosts
-                ssh vagrant@192.168.60.8 ...
-            '''
-          }
-      }
         stage('Set-up Node Environment') {
             steps {
                 echo 'Test Stage'

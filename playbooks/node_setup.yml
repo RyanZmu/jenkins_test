@@ -43,5 +43,5 @@
 
    - name: Install node.js dependencies
      command: |
-      cd "{{ node_apps_location }}"/book-lookup-app
+      cd "{{ node_apps_location }}"book-lookup-app
       npm install

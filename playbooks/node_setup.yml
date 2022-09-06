@@ -23,7 +23,6 @@
      copy:
       src: "/var/lib/jenkins/workspace/Test_Pipeline/app/book-lookup-app"
       dest: "{{ node_apps_location }}"
-      remote_src: true
      changed_when: false
 
    - name: Install app dependencies defined in package.json

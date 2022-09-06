@@ -18,7 +18,9 @@
 
 - Test run the first stage - Done
 
-- Fix SSH issue with webserver from Jenkins server - In Progress
+- Fix SSH issue with webserver from Jenkins server - Done
+
+- Figure out how to build React app in the server environment
 
 - Go back and design the app's basic functions
 

@@ -39,4 +39,4 @@
      when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/src/App.js') == -1"
 
    - name: Start React app
-     command: "npm start"
+     command: "npm start {{ node_apps_location }}/book-lookup-app/src/App.js"

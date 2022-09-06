@@ -35,5 +35,5 @@
      changed_when: false
 
    - name: Start example Node.js apps.
-     command: "/usr/local/bin/forever start {{ node_apps_location }}/app/src/book-lookup-app/src/App.js"
-     when: "forever_list.stdout.find(node_apps_location + '/app/src/book-lookup-app/src/App.js') == -1"
+     command: "/usr/local/bin/forever start {{ node_apps_location }}/book-lookup-app/src/App.js"
+     when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/src/App.js') == -1"

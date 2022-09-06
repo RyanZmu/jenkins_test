@@ -9,7 +9,7 @@ pipeline {
                 git branch: 'main', url: 'git@github.com:RyanZmu/jenkins_test.git'
             }
         }
-             stage('ssh') {
+             stage {
           sshagent(credentials: ['vagrant']) {
             sh '''
                 [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh

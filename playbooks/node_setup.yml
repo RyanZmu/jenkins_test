@@ -23,8 +23,8 @@
      copy:
       src: "app"
       dest: "{{ node_apps_location }}"
-      remote_src: true
       changed_when: false
+     changed_when: false
 
    - name: Install app dependencies defined in package.json
      npm:

@@ -5,4 +5,4 @@
    - name: Install node.js dependencies
      command:
       chdir: /usr/local/opt/node/book-lookup-app
-      cmd: npm run build
+      cmd: npm start

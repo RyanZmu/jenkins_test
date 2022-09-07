@@ -9,4 +9,7 @@
       cmd: |
        npm install
        npm run build
-       npm run deploy
+       npm install serve
+
+   - name: Start express
+     chdir: /usr/local/opt/node/book-lookup-app/build serve -p 80

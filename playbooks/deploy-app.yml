@@ -12,21 +12,27 @@
       cmd: npm install
      changed_when: false
 
-   - name: Build app
+   - name: Start app
      ansible.builtin.command:
       chdir: "{{ app_dir }}"
-      cmd: npm run build
+      cmd: npm start
      changed_when: false
 
-   - name: Install serve
-     ansible.builtin.command:
-      chdir: "{{ app_dir }}"
-      cmd: npm install serve
-     changed_when: false
+  #  - name: Build app
+  #    ansible.builtin.command:
+  #     chdir: "{{ app_dir }}"
+  #     cmd: npm run build
+  #    changed_when: false
+
+  #  - name: Install serve
+  #    ansible.builtin.command:
+  #     chdir: "{{ app_dir }}"
+  #     cmd: npm install serve
+  #    changed_when: false
 
 
-   - name: Start express
-     ansible.builtin.command:
-      chdir: /usr/local/opt/node/book-lookup-app/build
-      cmd: serve -p 80
-     changed_when: false
+  #  - name: Start express
+  #    ansible.builtin.command:
+  #     chdir: /usr/local/opt/node/book-lookup-app/build
+  #     cmd: serve -p 80
+  #    changed_when: false

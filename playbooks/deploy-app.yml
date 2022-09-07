@@ -12,13 +12,16 @@
       cmd: npm install
 
    - name: Build app
-     chdir: "{{ app_dir }}"
-     cmd: npm run build
+     command:
+      chdir: "{{ app_dir }}"
+      cmd: npm run build
 
    - name: Install serve
-     chdir: "{{ app_dir }}"
-     cmd: npm install serve
+     command:
+      chdir: "{{ app_dir }}"
+      cmd: npm install serve
 
    - name: Start express
-     chdir: /usr/local/opt/node/book-lookup-app/build
-     cmd: serve -p 80
+     command:
+      chdir: /usr/local/opt/node/book-lookup-app/build
+      cmd: serve -p 80

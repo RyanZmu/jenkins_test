@@ -8,6 +8,4 @@
       chdir: /usr/local/opt/node/book-lookup-app
       cmd: |
        npm install
-       npm run build
-       npm run deploy
        npm start

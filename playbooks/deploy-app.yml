@@ -2,14 +2,23 @@
 - hosts: rocky
   become: true
 
+  vars:
+   app_dir: /usr/local/opt/node/book-lookup-app
+
   tasks:
    - name: Install node.js dependencies
      command:
-      chdir: /usr/local/opt/node/book-lookup-app
-      cmd: |
-       npm install
-       npm run build
-       npm install serve
+      chdir: "{{ app_dir }}"
+      cmd: npm install
+
+   - name: Build app
+     chdir: "{{ app_dir }}"
+     cmd: npm run build
+
+   - name: Install serve
+     chdir: "{{ app_dir }}"
+     cmd: npm install serve
 
    - name: Start express
-     chdir: /usr/local/opt/node/book-lookup-app/build serve -p 80
+     chdir: /usr/local/opt/node/book-lookup-app/build
+     cmd: serve -p 80

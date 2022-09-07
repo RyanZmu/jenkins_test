@@ -40,8 +40,3 @@
 
    - name: Check list of running Node.js apps.
      command: /usr/local/bin/forever list
-
-   - name: Install node.js dependencies
-     command:
-      chdir: /usr/local/opt/node/book-lookup-app
-      cmd: npm install

@@ -18,6 +18,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploy Stage'
+                sh '''ansible-playbook /var/lib/jenkins/workspace/Test_Pipeline/playbooks/deploy-app.yml'''
+
             }
         }
     }

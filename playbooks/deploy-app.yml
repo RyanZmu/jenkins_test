@@ -7,21 +7,26 @@
 
   tasks:
    - name: Install node.js dependencies
-     command:
+     ansible.builtin.command:
       chdir: "{{ app_dir }}"
       cmd: npm install
+     changed_when: false
 
    - name: Build app
-     command:
+     ansible.builtin.command:
       chdir: "{{ app_dir }}"
       cmd: npm run build
+     changed_when: false
 
    - name: Install serve
-     command:
+     ansible.builtin.command:
       chdir: "{{ app_dir }}"
       cmd: npm install serve
+     changed_when: false
+
 
    - name: Start express
-     command:
+     ansible.builtin.command:
       chdir: /usr/local/opt/node/book-lookup-app/build
       cmd: serve -p 80
+     changed_when: false

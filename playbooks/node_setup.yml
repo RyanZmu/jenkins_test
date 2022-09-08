@@ -39,7 +39,10 @@
     #  when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/server/express.js') == -1"
 
    - name: Stop forever
-     command: /usr/local/bin/forever stop
+     command: "/usr/local/bin/forever stop {{ item }}"
+     with_items:
+     - App.js
+     - express.js
      tags: [test]
 
    - name: Check list of running Node.js apps.

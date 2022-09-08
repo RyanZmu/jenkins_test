@@ -10,8 +10,8 @@
      ansible.builtin.command:
       chdir: "{{ app_dir }}"
       cmd: |
-       npm install -g serve
-       serve -s build -l 8080
+       npm install
+       npm run build
      changed_when: false
 
   #  - name: Start app

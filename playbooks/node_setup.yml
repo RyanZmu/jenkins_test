@@ -5,7 +5,12 @@
   vars:
    node_apps_location: /usr/local/opt/node
 
-  pre_tasks: []
+
+
+  pre_tasks:
+  - name: Stop forever if started; so app will update correctly
+    command: forever stop
+    changed_when: false
 
   roles:
    - nodejs

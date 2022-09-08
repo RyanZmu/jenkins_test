@@ -34,8 +34,8 @@
      register: forever_list
      changed_when: false
 
-   - name: Start example Node.js apps.
-     command: "/usr/local/bin/forever start {{ node_apps_location }}/book-lookup-app/server/express.js"
+  #  - name: Start example Node.js apps.
+  #    command: "/usr/local/bin/forever start {{ node_apps_location }}/book-lookup-app/server/express.js"
     #  when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/server/express.js') == -1"
 
    - name: Check list of running Node.js apps.

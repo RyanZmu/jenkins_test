@@ -10,8 +10,8 @@
   pre_tasks:
   - name: Stop forever if started; so app will update correctly
     command: /usr/local/bin forever stop
+    become_user: root
     changed_when: false
-    become: true
 
   roles:
    - nodejs

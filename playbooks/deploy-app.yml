@@ -12,6 +12,7 @@
       cmd: |
        npm install
        npm run build
+       npm run deploy
      changed_when: false
 
   #  - name: Start app

@@ -12,13 +12,13 @@ pipeline {
         stage('Set-up Node Environment') {
             steps {
                 echo 'Test Stage'
-                sh '''ansible-playbook /var/lib/jenkins/workspace/Test_Pipeline/playbooks/node_setup.yml -vv'''
+                sh '''ansible-playbook /var/lib/jenkins/workspace/Test_Pipeline/playbooks/node_setup.yml -v'''
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploy Stage'
-                sh '''ansible-playbook /var/lib/jenkins/workspace/Test_Pipeline/playbooks/deploy-app.yml -vv'''
+                sh '''ansible-playbook /var/lib/jenkins/workspace/Test_Pipeline/playbooks/deploy-app.yml -v'''
 
             }
         }

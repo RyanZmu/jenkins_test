@@ -11,7 +11,7 @@
       chdir: "{{ app_dir }}"
       cmd: |
        npm install
-       npm start
+      #  npm start
      changed_when: false
 
   #  - name: Start app

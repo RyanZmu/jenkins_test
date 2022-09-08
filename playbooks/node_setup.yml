@@ -9,7 +9,7 @@
 
   pre_tasks:
   - name: Stop forever if started; so app will update correctly
-    command: forever stop
+    command: /usr/local/bin forever stop
     changed_when: false
 
   roles:

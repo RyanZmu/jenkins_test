@@ -9,7 +9,10 @@
    - name: Install node.js dependencies
      ansible.builtin.command:
       chdir: "{{ app_dir }}"
-      cmd: npm install
+      cmd: |
+       npm install
+       npm install -g serve
+       serve -s build -l 8080
      changed_when: false
 
   #  - name: Start app

@@ -5,14 +5,6 @@
   vars:
    node_apps_location: /usr/local/opt/node
 
-
-
-  # pre_tasks:
-  # - name: Stop forever if started; so app will update correctly
-  #   command: /usr/local/bin forever stop
-  #   become_user: root
-  #   changed_when: false
-
   roles:
    - nodejs
 #  nodejs role used to setup node.js for our app
@@ -53,3 +45,7 @@
 
    - name: Check list of running Node.js apps.
      command: /usr/local/bin/forever list
+
+  post_tasks:
+    - name: Restart server
+      command: shutdown -r

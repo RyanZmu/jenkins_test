@@ -40,7 +40,3 @@
   #     chdir: /usr/local/opt/node/book-lookup-app/build
   #     cmd: serve -p 80
   #    changed_when: false
-
-  post_tasks:
-    - name: Restart server
-      command: shutdown -r

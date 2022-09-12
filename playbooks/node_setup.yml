@@ -45,7 +45,3 @@
 
    - name: Check list of running Node.js apps.
      command: /usr/local/bin/forever list
-
-  post_tasks:
-    - name: Restart server
-      command: shutdown -r

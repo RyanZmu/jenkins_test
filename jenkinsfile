@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    env.VERBOSE_LEVEL = env.VERBOSE_LEVEL ? env.VERBOSE_LEVEL : "1"
+    params.ENVIRONMENT.VERBOSE_LEVEL = params.ENVIRONMENT.VERBOSE_LEVEL ? params.ENVIRONMENT.VERBOSE_LEVEL : "1"
 
     stages {
 

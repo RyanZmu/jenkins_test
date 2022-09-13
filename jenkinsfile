@@ -4,14 +4,7 @@
 pipeline {
     agent any
     // params.ENVIRONMENT.VERBOSE_LEVEL = params.ENVIRONMENT.VERBOSE_LEVEL ? params.ENVIRONMENT.VERBOSE_LEVEL : "1"
-   properties (
-    parameters ([
-        choice(
-            name: "VERBOSE_LEVEL"
-            choices: [1,2,3,0]
-        )
-    ])
-   )
+
     stages {
 
         stage('Clone') {

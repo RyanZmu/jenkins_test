@@ -32,16 +32,18 @@
      register: forever_list
      changed_when: false
 
+   - name: Stop forever before restarting it with new app state (fix this later)
+     command: forever stopall
+     register: forever_status
+
+   - name: Check to make sure forever has stopped
+     debug:
+      msg: 'Forever status: {{ forever_status.stdout }}'
+
+
    - name: Start example Node.js apps.
      command: "/usr/local/bin/forever start {{ node_apps_location }}/book-lookup-app/server/express.js"
      when: "forever_list.stdout.find(node_apps_location + '/book-lookup-app/server/express.js') == -1"
-
-  #  - name: Stop forever
-  #    command: "/usr/local/bin/forever stop {{ item }}"
-  #    with_items:
-  #    - "{{ node_apps_location }}/book-lookup-app/src/App.js"
-  #    - "{{ node_apps_location }}/book-lookup-app/server/express.js"
-  #    tags: [test]
 
    - name: Check list of running Node.js apps.
      command: /usr/local/bin/forever list

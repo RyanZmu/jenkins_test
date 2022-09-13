@@ -1,3 +1,5 @@
+#!/usr/bin/en groovy
+
 properties ([
     parameters ([
         choice(

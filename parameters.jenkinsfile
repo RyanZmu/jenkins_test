@@ -4,6 +4,7 @@ properties ([
     parameters ([
         choice(
             name: "VERBOSE_LEVEL"
+            default_value: 0
             choices: [1,2,3,0]
         )
     ])
